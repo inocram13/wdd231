@@ -1,0 +1,43 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for the navigation bar */
+  .nav-container {
+    width: 80%; /* Adjust width as needed */
+    margin: 20px auto; /* Center the box */
+    border: 2px solid #333; /* Border of the box */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the box */
+    background-color: #f9f9f9; /* Background color of the box */
+  }
+  
+  /* Navigation bar styling */
+  .navbar ul {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Horizontal layout */
+    justify-content: space-around; /* Space out the links */
+  }
+  
+  .navbar li {
+    display: inline; /* Ensure items are inline */
+  }
+  
+  .navbar a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Link color */
+    font-weight: bold;
+    padding: 10px 20px; /* Padding around links */
+    border-radius: 4px; /* Rounded edges for links */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .navbar a:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: white; /* Text color on hover */
+  }
+  

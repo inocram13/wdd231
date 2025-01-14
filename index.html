@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 232 - Website Frontend Development 1 - Kieth Marconi Acosta</title>
+    <meta name="description" content="Author: Kieth Marconi Acosta, WDD 231 - Website Frontend Development 1">
+    <meta name="author" content="Kieth Marconi Acosta">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <script src="scripts/temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script defer src="scripts/base.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><img src="images/" alt="">Kieth Marconi Acosta</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="https://github.com/inocram13">Github Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/kieth-marconi-acosta-641b7b29b/">Linkedin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="card-container">
+            <section class="card">
+                <h2>Course Work</h2>
+                <ul id="course-list">
+                    <!-- Dynamically populated via js -->
+                </ul>
+            </section>
+            <section class="card">
+                <h2>Cavite, Philippines</h2>
+                <picture>
+                    <source srcset="images/narra-large.webp" media="(min-width: 1000px)">
+                    <source srcset="images/narra-medium.webp" media="(min-width: 500px)">
+                    <img src="images/narra-small.webp" alt="Philippine National Tree" width="500" height="250">
+                </picture>
+                    <p>Narra Tree</p>         
+            </section>
+            <section id="certificate">
+                <h2>Web and Computer Programming Certificate</h2>
+                <div class="filter-buttons">
+                    <button id="filter-all">All</button>
+                    <button id="filter-cse">CSE</button>
+                    <button id="filter-wdd">WDD</button>
+                </div>
+                <div id="course-cards" class="cards-container">
+                    <!-- Dynamically populated via JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 😎Kieth Marconi Acosta😎 | Philippines 
+        <img src="images/Flag_of_the_Philippines.svg.png" alt="Philippine Flag" style="width: 30px; height: auto;"></p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+    </footer>
+</body>
+</html>
