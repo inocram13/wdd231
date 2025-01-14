@@ -111,3 +111,25 @@ document.getElementById('filter-wdd').addEventListener('click', () => populateCo
 populateCourses();
 // Populate coursework on page load
 populateCoursework();
+
+// Define breakpoints
+const mobileBreakpoint = 768; // Example: devices smaller than 768px are considered mobile
+
+// Function to check if the device is mobile or desktop
+function checkDeviceType() {
+    if (window.innerWidth <= mobileBreakpoint) {
+        console.log("Mobile device detected");
+        // Perform mobile-specific actions
+        document.body.style.backgroundColor = "#f4f4f4"; // Example: change background for mobile
+    } else {
+        console.log("Desktop device detected");
+        // Perform desktop-specific actions
+        document.body.style.backgroundColor = "#ffffff"; // Example: change background for desktop
+    }
+}
+
+// Run the function on page load
+checkDeviceType();
+
+// Add an event listener to handle window resizing
+window.addEventListener("resize", checkDeviceType);
