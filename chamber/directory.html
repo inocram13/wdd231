@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 232 - Website Frontend Development 1 - Kieth Marconi Acosta</title>
     <meta name="description" content="Author: Kieth Marconi Acosta, WDD 231 - Website Frontend Development 1">
     <meta name="author" content="Kieth Marconi Acosta">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta property = "og:title" content="Chamber of Commerce Directory">
+    <meta property = "og:title" content="Amaya Chamber of Commerce Directory">
     <meta property = "og:type" content="website">
-    <meta property = "og:image" content=""> 
+    <meta property = "og:image" content="https://inocram13.github.io/wdd231/chamber/images(3).jpg">
+    <meta property="og:url" content="https://inocram13.github.io/wdd231/chamber">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,129 @@
     <script defer src="scripts/base.js"></script>
 </head>
 <body>
-    
+    <header>
+        <img src="images/logo.png" alt="Amaya Chamber of Commerce" width="70" height="59">
+        <div>
+            <span>Amaya</span>
+            <div>Chamber of Commerce</div>
+            <button id="hamburger" aria-label="hamburger"></button>
+        </div>
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="directory.html">Directory</a>
+            </li>
+            <li>
+                <a href="join.html">Join</a>
+            </li>
+            <li>
+                <a href="discover.html">Discover</a>
+            </li>
+        </ul>    
+    </nav>
+    <main>
+        <h1>Directory</h1>
+        <div class="buttons">
+            <button class="btnGrid active">Grid</button>
+            <button class="btnList">List</button>            
+        </div>
+        <div id="members" class="grid"></div>
+        <section>
+            <img src="images/kambingan.webp" loading="lazy" width="300" height="200" alt="Kambingan ni Gelo">
+            <h2>Kambingan ni Gelo</h2>
+            <p>156 Pasinaya Central, Naic, Cavite</p>
+            <p>09528572934</p>
+            <p>
+                <a href="http://hakdog.com" target="_blank">Website</a>
+            </p>
+            <p>Level = Ginto</p>
+        </section>
+        <section>
+            <img src="images/pandayan.webp" loading="lazy" width="300" height="200" alt="Pandayan ni Fabian">
+            <h2>Pandayan ni Fabian</h2>
+            <p>Bagong Pook, Navotas, Balayan, Batangas</p>
+            <p>09073628102</p>
+            <p>
+                <a href="http://pandayan.com"></a>
+            </p>
+            <p>Level = Ginto</p>
+        </section>
+        <section>
+            <img src="images/mangingisda.webp" loading="lazy" width="300" height="200" alt="Bangka ni Moses">
+            <h2>Bangka ni Moses</h2>
+            <p>Tubigan, Navotas, Balayan, Batangas</p>
+            <p>09268926892</p>
+            <p>
+                <a href="http://bangkanimosessira.com"></a>
+            </p>
+            <p>Level = Tanso
+            </p>
+        </section>
+        <section>
+            <img src="images/opisina.webp" loading="lazy" width="300" height="200" alt="Opisina ng Amaya">
+            <h2>Opisina ng Amaya</h2>
+            <p>105 Tramo Road, Amaya 1, Tanza, Cavite</p>
+            <p>09132384943</p>
+            <p>
+                <a href="http://opisinangamaya.com"></a>
+            </p>
+            <p>Level = Wala</p>
+        </section>
+        <section>
+            <img src="images/magsasaka.webp" loading="lazy" width="300" height="200" alt="Sakahan ni Barokay">
+            <h2>Sakahan ni Barokay</h2>
+            <p>234 Tubigan, Navotas, Balayan, Batangas</p>
+            <p>09847658322</p>
+            <p>
+                <a href="http://sakahannibarokay.com"></a>
+            </p>
+            <p>Level = Pilak</p>
+        </section>
+        <section>
+            <img src="images/taniman.webp" loading="lazy" width="300" height="200" alt="Patanim ni Kim">
+            <h2>Patanim ni Kim</h2>
+            <p>344 Springtown, Bukal, Tanza, Cavite</p>
+            <p>09234746245</p>
+            <p>
+                <a href="http://tanimannikim.com"></a>
+            </p>
+            <p>Level = Ginto</p>
+        </section>
+        <section>
+            <img src="images/arnis.webp" width="300" height="200" alt="Ang Arnis: Pepe">
+            <h2>Ang Arnis: Pepe</h2>
+            <p>212 Midsayap, North Cotobato</p>
+            <p>09342465782</p>
+            <p>
+                <a href="arnisnipepe.com"></a>
+            </p>
+            <p>Level = Wala</p>
+        </section>
+    </main>
+    <footer>
+        <section class="address">
+            <p>Amaya Chamber of Commerce</p>
+            <p>234 Amaya</p>
+            <p>Tanza, Cavite 4108</p>
+            <p>info.amayacoc.org</p>
+            <p>09074633748</p>
+        </section>
+        <section class="social">
+            <a href="#"></a>
+            <img src="images/Facebook.svg" alt="Facebook" width="25" height="44">
+            <a href="#"></a>
+            <img src="images/X_icon.svg" alt="X" width="25" height="44">
+            <a href="#"></a>
+            <img src="images/linkedin.svg" alt="Linkedin" width="25" height="44">
+        </section>
+        <section class="project">
+            <p>WDD231 Class Project</p>
+            <p>Kieth Marconi Acosta</p>
+        </section>
+    </footer>
 </body>
 </html>
