@@ -113,7 +113,7 @@ header div div {
 #navbar ul li a:hover {
     background-color: #007bff;
     color: #fbfdff;
-    padding: auto;
+    padding: 0.5rem 1rem; /* Fixed padding */
 }
 
 /* Mobile Styles */
@@ -153,7 +153,6 @@ header div div {
         display: flex; /* Show navbar when not hidden */
     }
 }
-
 
 /* Base styles */
 body {
@@ -376,4 +375,3 @@ footer .social img {
     background-color: #218838; /* Slightly darker green */
     transform: scale(1.05);
 }
-
