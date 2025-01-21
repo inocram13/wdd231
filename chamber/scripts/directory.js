@@ -17,9 +17,13 @@ const membersContainer = document.querySelector('#members');
             members.forEach(member => {
                 const section = document.createElement('section');
                 section.className = 'member-card'; // Add card class for styling
+
+                const imageHTML = layout === "grid"
+                ? `<img src="images/${member.image}" alt="${member.name}" class="card-image" loading ="lazy">`
+                :'';
                 section.innerHTML = `
                     <div class="card">
-                        <img src="images/${member.image}" alt="${member.name}" class="card-image" loading="lazy">
+                        ${imageHTML}
                         <div class="card-content">
                             <h2 class="card-title">${member.name}</h2>
                             <p>${member.address}</p>
