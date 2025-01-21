@@ -1,0 +1,1 @@
+document.getElementById("lastmodified").textContent = `${document.lastModified}`;

@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Kambingan ni Gelo",
+        "address": "156 Pasinaya Central, Naic, Cavite",
+        "phone": "09528572934",
+        "website": "http://hakdog.com",
+        "image": "kambingan.webp",
+        "level": "Gold"
+    },
+    {
+        "name": "Pandayan ni Fabian",
+        "address": "Bagong Pook, Navotas, Batangas",
+        "phone": "09073628102",
+        "website": "http://pandayan.com",
+        "image": "pandayan.webp",
+        "level": "Gold"
+    },
+    {
+        "name": "Bangka ni Moses",
+        "address": "Tubigan, Navotas, Batangas",
+        "phone": "09268926892",
+        "website": "http://bangkanimosessira.com",
+        "image": "mangingisda.webp",
+        "level": "Bronze"
+    },
+    {
+        "name": "Opisina ng Amaya",
+        "address": "105 Tramo Road, Amaya 1, Tanza, Cavite",
+        "phone": "09132384943",
+        "website": "http://opisinangamaya.com",
+        "image": "opisina.webp",
+        "level": "None"
+    },
+    {
+        "name": "Sakahan ni Barokay",
+        "address": "234 Tubigan, Navotas, Batangas",
+        "phone": "09847658322",
+        "website": "http://sakahannibarokay.com",
+        "image": "magsasaka.webp",
+        "level": "Silver"
+    },
+    {
+        "name": "Patanim ni Kim",
+        "address": "344 Springtown, Bukal, Tanza, Cavite",
+        "phone": "09234746245",
+        "website": "http://tanimannikim.com",
+        "image": "taniman.webp",
+        "level": "Gold"
+    },
+    {
+        "name": "Ang Arnis: Pepe",
+        "address": "212 Midsayap, North Cotobato",
+        "phone": "09342465782",
+        "website": "http://arnisnipepe.com",
+        "image": "arnis.webp",
+        "level": "None"
+    }
+]

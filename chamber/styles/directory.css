@@ -1,0 +1,379 @@
+/* General Styles for Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+}
+
+header img {
+    height: 50px;
+}
+
+header div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns text to the left */
+    margin-right: auto; /* Pushes the other elements to the right */
+    padding: 0.09rem;
+}
+
+header div span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.09rem;
+}
+
+header div div {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* Hamburger Menu Button */
+#hamburger {
+    display: none; /* Hidden by default on larger screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 11; /* Ensure it's above the navbar */
+}
+
+.hamburger-icon {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger-icon::before {
+    top: -8px;
+}
+
+.hamburger-icon::after {
+    top: 8px;
+}
+
+/* Transform to 'X' when active */
+#hamburger.open .hamburger-icon {
+    background-color: transparent;
+}
+
+#hamburger.open .hamburger-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#hamburger.open .hamburger-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Navbar Styles */
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #0fd7ff;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul li {
+    margin: 0 1rem;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    background-color: #007bff;
+    color: #fbfdff;
+    padding: auto;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    #hamburger {
+        display: block; /* Show hamburger button on smaller screens */
+    }
+    header {
+        flex-wrap: wrap; /* Allows elements to stack in smaller viewports */
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #febdbd;
+        display: none; /* Hidden by default */
+        z-index: 10;
+        border-top: 1px solid #ccc;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 0;
+    }
+
+    #navbar ul li {
+        margin: 0.5rem 0;
+    }
+
+    #navbar:not(.hidden) {
+        display: flex; /* Show navbar when not hidden */
+    }
+}
+
+
+/* Base styles */
+body {
+    font-family: 'Poetsen One', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #005f73;
+    color: #fff;
+}
+
+header img {
+    display: block;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+}
+
+header span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header div div {
+    font-size: 1.2em;
+}
+
+header button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+/* Main styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #005f73;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+button {
+    background-color: #94d2bd;
+    border: 1px solid #005f73;
+    color: #005f73;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+button.active {
+    background-color: #005f73;
+    color: #fff;
+}
+
+#members {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #005f73;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer section {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer .social a {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+footer .social img {
+    vertical-align: middle;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+/* Members Container Styling */
+#members.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+#members.list {
+    display: block;
+}
+
+/* Card Styling */
+.member-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.member-card:hover {
+    transform: scale(1.02);
+}
+
+/* Card Content */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.card-content p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.card-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+/* Buttons Container */
+.buttons {
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+    margin: 1rem 0;
+    justify-content: center; /* Center align the buttons */
+}
+
+/* Default Button Styles */
+.buttons button {
+    background-color: #007bff; /* Primary color */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover */
+.buttons button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Active Button State */
+.buttons button.active {
+    background-color: #28a745; /* Green for active state */
+    color: #fff;
+    border: 2px solid #1e7e34;
+}
+
+/* Active Button Hover */
+.buttons button.active:hover {
+    background-color: #218838; /* Slightly darker green */
+    transform: scale(1.05);
+}
+
