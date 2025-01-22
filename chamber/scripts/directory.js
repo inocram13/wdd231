@@ -19,7 +19,7 @@ const membersContainer = document.querySelector('#members');
                 section.className = 'member-card'; // Add card class for styling
 
                 const imageHTML = layout === "grid"
-                ? `<img src="images/${member.image}" alt="${member.name}" class="card-image" loading ="lazy">`
+                ? `<img src="images/${member.image}" alt="${member.name}" class="card-image"`
                 :'';
                 section.innerHTML = `
                     <div class="card">
