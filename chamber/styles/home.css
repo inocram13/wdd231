@@ -1,4 +1,4 @@
-/* Root Variables for Reusability */
+/* Root Variables */
 :root {
     --primary-color: #005f73;
     --secondary-color: #94d2bd;
@@ -7,13 +7,20 @@
     --text-color: #333;
     --background-color: #f9f9f9;
     --light-color: #f8f8f8;
+    --white: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 5px;
 }
 
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
+/* Reset and Global Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -26,7 +33,7 @@ header {
     align-items: center;
     padding: 10px 20px;
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--white);
 }
 
 header img {
@@ -41,14 +48,6 @@ header div {
 header span {
     font-size: 1.5em;
     font-weight: bold;
-}
-
-header button {
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.5em;
 }
 
 /* Hamburger Menu Styles */
@@ -103,7 +102,6 @@ header button {
     transform: rotate(-45deg);
     top: 0;
 }
-
 /* Navbar Styles */
 #navbar {
     display: flex;
@@ -127,22 +125,25 @@ header button {
     text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
-    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #navbar ul li a:hover {
     background-color: var(--hover-color);
-    color: #fff;
-    padding: 0.5rem 1rem;
+    color: var(--white);
 }
 
+/* Responsive Navbar */
 @media (max-width: 768px) {
     #hamburger {
         display: block;
     }
+
     header {
         flex-wrap: wrap;
     }
+
     #navbar {
         flex-direction: column;
         align-items: center;
@@ -155,119 +156,31 @@ header button {
         z-index: 10;
         border-top: 1px solid #ccc;
     }
+
     #navbar ul {
         flex-direction: column;
         width: 100%;
         align-items: center;
     }
+
     #navbar ul li {
         margin: 0.5rem 0;
     }
+
     #navbar:not(.hidden) {
         display: flex;
     }
 }
 
-/* Main Styles */
-main {
-    padding: 20px;
-    text-align: center;
-}
-main h1{
-    margin: .5rem 10px;
-}
-h1 {
-    color: var(--primary-color);
-    font-size: 2rem;
-}
-
-/* Buttons */
-.buttons {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
-    justify-content: center;
-}
-
-.buttons button {
-    background-color: var(--hover-color);
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.buttons button:hover {
-    background-color: var(--hover-color);
-    transform: scale(1.05);
-}
-
-.buttons button.active {
-    background-color: var(--active-color);
-    color: #fff;
-    border: 2px solid #1e7e34;
-}
-
-/* Members Section */
-#members {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-top: 20px;
-}
-
-.member-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-.member-card:hover {
-    transform: scale(1.02);
-}
-
-.card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-title {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-    color: var(--text-color);
-}
-
-.card-content p {
-    margin: 0.5rem 0;
-    color: #666;
-}
-
-.card-content a {
-    color: var(--hover-color);
-    text-decoration: none;
-}
-
-.card-content a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
     background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px;
+    color: var(--white);
+    padding: 20px;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
-    unicode-bidi: isolate;
 }
 
 footer section {
@@ -281,43 +194,96 @@ footer p {
 footer .social {
     display: flex;
     justify-content: center;
+    gap: 10px;
 }
 
 footer .social a {
-    margin: 0 5px;
     display: inline-block;
 }
 
 footer .social img {
     vertical-align: middle;
+    width: 25px;
+    height: auto;
 }
 
-section.ew div{
-    background-color: #EEE;
+/* Forecast, Events, and Weather Section */
+.forecast-events-weather {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--background-color);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
 }
 
-
-*{
-    font-family:'Roboto', sans-serif;
+.forecast, .events, .weather {
+    background-color: var(--secondary-color);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    
 }
 
-div{
-    display: block;
-    unicode-bidi: isolate;
-}
-
-section.ew h2{
+.forecast h2, .events h2, .weather h2 {
+    color: var(--light-color);
+    background-color: var(--primary-color);
     margin: 0;
-    background-color: #005f73;
-    color: #EEE;
-    padding: 5px 10px;
+    padding: .3rem 0;
+    font-size: 1.5rem;
 }
-main h2{
-    margin: 5rem 10px;
-    color: #28a745;
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
 }
- w
- 
-div.weather div{
-    display: flex;
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.hero img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+img{
+    border-style: none;
+}
+
+.hero a{
+    position: absolute;
+    right: 10px;;
+    bottom: 10px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    color: var(--text-color);
+    border: solid 1px var(--text-color);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--secondary-color);
+}
+
+h1{
+    display: block;
+    font-size: 2em;
+    color: #005f73;
+}
+main h1{
+    padding: 20px;
+    text-align: center;
+}
+
+spot h2{
+    background-color: #94d2bd;
 }

@@ -1,6 +1,6 @@
 async function createSpotlight() {
     try {
-        const response = await fetch('path/to/members.json');
+        const response = await fetch('data/members.json');
         const members = await response.json();
 
         const spotlightContainer = document.getElementById('spot');

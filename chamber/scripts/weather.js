@@ -1,6 +1,6 @@
-const apiKey = "2ed35afebf26a75b72e060b3991275f8"; // Replace with your OpenWeatherMap API key
-const lat = 14.3372; // Latitude of Amaya
-const lon = 120.8533; // Longitude of Amaya
+const apiKey = "2ed35afebf26a75b72e060b3991275f8";
+const lat = 14.3372;
+const lon = 120.8533;
 
 async function getWeather() {
     try {
