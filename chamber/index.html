@@ -103,5 +103,23 @@
             <p>Kieth Marconi Acosta</p>
         </section>
     </footer>
+
+    <script>
+        // JavaScript to set weather icon dynamically
+        window.addEventListener('load', function() {
+            const weatherIcon = document.getElementById('weather-icon');
+            const weatherData = {
+                icon: 'sunny-icon.png', // Example of a valid icon name (replace with real data)
+            };
+
+            // If icon data is available, set the src attribute
+            if (weatherData.icon) {
+                weatherIcon.src = `images/${weatherData.icon}`;
+            } else {
+                // Set default fallback image if no icon data is found
+                weatherIcon.src = 'images/default-icon.png';
+            }
+        });
+    </script>
 </body>
 </html>
