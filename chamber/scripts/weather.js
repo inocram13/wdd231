@@ -1,34 +1,44 @@
-async function fetchWeather() {
+const apiKey = "2ed35afebf26a75b72e060b3991275f8";
+const lat = 14.3372;
+const lon = 120.8533;
+
+async function getWeather() {
     try {
-        // Example API request (replace with your actual API and key)
-        const apiKey = '2ed35afebf26a75b72e060b3991275f8';
-        const city = 'Manila';  // Change this to the desired city
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
-        const data = await response.json();
+        // Fetch current weather
+        const weatherResponse = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
+        );
+        const weatherData = await weatherResponse.json();
 
-        // Extract weather icon code (from OpenWeatherMap API)
-        const weatherIconCode = data.weather[0].icon;  // Example: "10d"
-        
-        // Construct the icon URL dynamically
-        const iconUrl = `https://openweathermap.org/img/wn/${weatherIconCode}.png`;
+        // Fetch 3-day forecast
+        const forecastResponse = await fetch(
+            `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`
+        );
+        const forecastData = await forecastResponse.json();
 
-        // Set the weather icon
-        document.getElementById('weather-icon').src = iconUrl;
+        // Update current weather
+        document.getElementById("city-name").textContent = weatherData.name;
+        document.getElementById("weather-icon").src = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+        document.getElementById("weather-icon").alt = weatherData.weather[0].description;
+        document.getElementById("current-temp").textContent = `${Math.round(weatherData.main.temp)}°F`;
+        document.getElementById("weather-desc").textContent = weatherData.weather[0].description;
+        document.getElementById("high-temp").textContent = `${Math.round(weatherData.main.temp_max)}°F`;
+        document.getElementById("low-temp").textContent = `${Math.round(weatherData.main.temp_min)}°F`;
+        document.getElementById("humidity").textContent = `${weatherData.main.humidity}%`;
+        document.getElementById("sunrise").textContent = new Date(weatherData.sys.sunrise * 1000).toLocaleTimeString();
+        document.getElementById("sunset").textContent = new Date(weatherData.sys.sunset * 1000).toLocaleTimeString();
 
-        // Display other weather data
-        document.getElementById('city-name').textContent = data.name;
-        document.getElementById('current-temp').textContent = `${data.main.temp}°C`;
-        document.getElementById('weather-desc').textContent = data.weather[0].description;
-        document.getElementById('high-temp').textContent = `${data.main.temp_max}°C`;
-        document.getElementById('low-temp').textContent = `${data.main.temp_min}°C`;
-        document.getElementById('humidity').textContent = `${data.main.humidity}%`;
-        document.getElementById('sunrise').textContent = new Date(data.sys.sunrise * 1000).toLocaleTimeString();
-        document.getElementById('sunset').textContent = new Date(data.sys.sunset * 1000).toLocaleTimeString();
-
+        // Update 3-day forecast
+        const forecastElements = document.getElementById("forecast").children;
+        for (let i = 0; i < 3; i++) {
+            const dayForecast = forecastData.list[i * 8]; // 8 items per day
+            const date = new Date(dayForecast.dt * 1000);
+            forecastElements[i].textContent = `${date.toLocaleDateString("en-US", { weekday: "long" })}: ${Math.round(dayForecast.main.temp)}°F`;
+        }
     } catch (error) {
         console.error("Error fetching weather data:", error);
     }
 }
 
-// Call the function to fetch and display the weather
-fetchWeather();
+// Call the function on page load
+getWeather();

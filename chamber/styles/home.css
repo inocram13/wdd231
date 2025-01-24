@@ -33,7 +33,7 @@ header {
     align-items: center;
     padding: 10px 20px;
     background-color: var(--primary-color);
-    color: var(--white);
+    color: #fff;
 }
 
 header img {
@@ -49,6 +49,15 @@ header span {
     font-size: 1.5em;
     font-weight: bold;
 }
+
+header button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
 
 /* Hamburger Menu Styles */
 #hamburger {
@@ -102,12 +111,15 @@ header span {
     transform: rotate(-45deg);
     top: 0;
 }
+
 /* Navbar Styles */
 #navbar {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--secondary-color);
+    width: 100%;
+    position: static;
 }
 
 #navbar ul {
@@ -134,52 +146,14 @@ header span {
     color: var(--white);
 }
 
-/* Responsive Navbar */
-@media (max-width: 768px) {
-    #hamburger {
-        display: block;
-    }
-
-    header {
-        flex-wrap: wrap;
-    }
-
-    #navbar {
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: var(--light-color);
-        display: none;
-        z-index: 10;
-        border-top: 1px solid #ccc;
-    }
-
-    #navbar ul {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    #navbar ul li {
-        margin: 0.5rem 0;
-    }
-
-    #navbar:not(.hidden) {
-        display: flex;
-    }
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
     background-color: var(--primary-color);
-    color: var(--white);
-    padding: 20px;
+    color: #fff;
+    padding: 10px;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
@@ -194,17 +168,15 @@ footer p {
 footer .social {
     display: flex;
     justify-content: center;
-    gap: 10px;
 }
 
 footer .social a {
+    margin: 0 5px;
     display: inline-block;
 }
 
 footer .social img {
     vertical-align: middle;
-    width: 25px;
-    height: auto;
 }
 
 /* Forecast, Events, and Weather Section */
@@ -226,7 +198,6 @@ footer .social img {
     padding: 15px;
     box-shadow: var(--shadow);
     text-align: center;
-    
 }
 
 .forecast h2, .events h2, .weather h2 {
@@ -250,19 +221,19 @@ footer .social img {
     margin-bottom: 10px;
 }
 
-.hero img{
+.hero img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-img{
+img {
     border-style: none;
 }
 
-.hero a{
+.hero a {
     position: absolute;
-    right: 10px;;
+    right: 10px;
     bottom: 10px;
     display: block;
     width: 100px;
@@ -274,23 +245,20 @@ img{
     background-color: var(--secondary-color);
 }
 
-h1{
+h1 {
     display: block;
     font-size: 2em;
     color: #005f73;
+    text-align: center;
 }
-main h1{
+
+main h1 {
     padding: 20px;
     text-align: center;
 }
 
-spot h2{
-    background-color: #94d2bd;
-}
-
 /* Styling for the spotlight container */
 #spot h3 {
-    background-color: var(--secondary-color);
     color: #000;
     margin: 0;
     padding: 0.3rem 0;
@@ -299,14 +267,14 @@ spot h2{
 }
 
 #spot {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center; 
-    padding: 20px; 
-    margin: 20px auto; 
-    max-width: 1200px; 
-    background-color: #ffffff; 
+    justify-content: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -318,6 +286,25 @@ spot h2{
         flex-direction: column;
         align-items: center;
     }
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #navbar ul li {
+        margin: 0.5rem 0;
+    }
+
+    #hamburger {
+        display: block;
+        margin-left: auto;
+    }
 }
 
 .spotlight-card {
@@ -325,30 +312,30 @@ spot h2{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px; 
+    width: 300px;
     padding: 15px;
     margin: 10px;
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
-    background-color: #f9f9f9; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Spotlight card hover effect */
 .spotlight-card:hover {
-    transform: translateY(-5px); /* Slight elevation */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Image styling */
 .spotlight-card img {
-    width: 100px; 
-    height: 100px; 
-    object-fit: cover; 
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     margin-bottom: 10px;
-    border-radius: 50%; /* Circular image */
+    border-radius: 50%;
 }
 
 /* Headline styling */

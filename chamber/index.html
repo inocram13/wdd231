@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 232 - Website Frontend Development 1 - Kieth Marconi Acosta</title>
-    <meta name="description" content="Amaya Chamber of Commerce: Connect with businesses, discover local events, and join our thriving community.">
+    <meta name="description" content="Author: Kieth Marconi Acosta, WDD 231 - Website Frontend Development 1">
     <meta name="author" content="Kieth Marconi Acosta">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta property="og:title" content="Amaya Chamber of Commerce Directory">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://inocram13.github.io/wdd231/chamber/images/images(3).jpg">
-    <meta property="og:url" content="https://inocram13.github.io/wdd231/chamber">
+    <meta property="og:url" content="https://inocram13.github.io/wdd231/chamber">    
     <link rel="stylesheet" href="styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/navbars.js" defer></script>
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script>
+    <script defer src="scripts/navbars.js"></script>
+    <script defer src="scripts/weather.js"></script>
+    <script defer src="scripts/spotlight.js"></script>
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Amaya Chamber of Commerce logo" width="70" height="59">
+        <img src="images/logo.png" alt="Amaya Chamber of Commerce" width="70" height="59">
         <div>
             <span>Amaya</span>
             <div>Chamber of Commerce</div>
@@ -37,42 +37,42 @@
             <li><a href="directory.html">Directory</a></li>
             <li><a href="join.html">Join</a></li>
             <li><a href="discover.html">Discover</a></li>
-        </ul>
+        </ul>    
     </nav>
     <main>
         <div class="hero">
-            <img src="images/ph.webp" width="1200" height="350" alt="Philippines landscape">
-            <a href="join.html" class="hero-cta">Join Us</a>
+            <img src="images/ph.webp" width="1200" height="350">
+            <a href="join.html">Join Us</a>
         </div>
         <h1>Home</h1>
         <section class="forecast-events-weather">
             <div class="events">
                 <h2>Events</h2>
-                <p>Lunes 6:00 PM: Nang tayo'y nagkakilala</p>
-                <p>Martes 5:00 PM: Nang tayo'y muling nagkita</p>
-                <p>Miyerkules 7:00 PM: Nagtapat ka ng iyong pag-ibig</p>
+                <p>Lunes 6:00pm: Nang tayo'y nagkakilala</p>
+                <p>Martes 5:00pm: Nang tayo'y muling nagkita</p>
+                <p>Miyerkules 7:00pm: Nagtapat ka ng iyong pag-ibig</p>
             </div>
             <div class="weather">
-                <h2>Weather</h2>
-                <img id="weather-icon" src="" alt="Weather icon" width="50" height="50">
-                <div id="weather-report" aria-live="polite">
-                    <p>City: <span id="city-name">--</span></p>
-                    <p id="current-temp">--°F</p>
-                    <p id="weather-desc">--</p>
-                    <p>High: <span id="high-temp">--°F</span></p>
-                    <p>Low: <span id="low-temp">--°F</span></p>
-                    <p>Humidity: <span id="humidity">--%</span></p>
-                    <p>Sunrise: <span id="sunrise">--</span></p>
-                    <p>Sunset: <span id="sunset">--</span></p>
-                </div>
+                <h2 id="city">Weather</h2>
+                    <img id="weather-icon" src="" alt="Weather Icon" width="50" height="50">
+                    <div id=" weather-report" aria-live="polite">
+                        <p>City: <span id="city-name"></span></p>
+                        <p id="current-temp">--°F</p>
+                        <p id="weather-desc">--</p>
+                        <p>High: <span id="high-temp">--°F</span></p>
+                        <p>Low: <span id="low-temp">--°F</span></p>
+                        <p>Humidity: <span id="humidity">--%</span></p>
+                        <p>Sunrise: <span id="sunrise">--</span></p>
+                        <p>Sunset: <span id="sunset">--</span></p>
+                    </div>
             </div>
             <div class="forecast">
                 <h2>Forecast</h2>
-                <div id="forecast">
-                    <p id="day1">Day 1: --</p>
-                    <p id="day2">Day 2: --</p>
-                    <p id="day3">Day 3: --</p>
-                </div>
+                <span id="forecast">
+                    <p id="day1">--</p>
+                    <p id="day2">--</p>
+                    <p id="day3">--</p>
+                </span>
             </div>
         </section>
         <section id="spot">
@@ -84,42 +84,21 @@
             <p>Amaya Chamber of Commerce</p>
             <p>234 Amaya</p>
             <p>Tanza, Cavite 4108</p>
-            <p>Email: info.amayacoc.org</p>
-            <p>Phone: 09074633748</p>
+            <p>info.amayacoc.org</p>
+            <p>09074633748</p>
         </section>
         <section class="social">
-            <a href="#" aria-label="Facebook">
-                <img src="images/Facebook.svg" alt="Facebook" width="55" height="44">
-            </a>
-            <a href="#" aria-label="Twitter">
-                <img src="images/X_icon.svg" alt="Twitter" width="25" height="44">
-            </a>
-            <a href="#" aria-label="LinkedIn">
-                <img src="images/linkedin.svg" alt="LinkedIn" width="24" height="44">
-            </a>
+            <a href="#" aria-label="Facebook"></a>
+            <img src="images/Facebook.svg" alt="Facebook" width="55" height="44">
+            <a href="#"></a>
+            <img src="images/X_icon.svg" alt="X" width="25" height="44">
+            <a href="#"></a>
+            <img src="images/linkedin.svg" alt="Linkedin" width="24" height="44">
         </section>
         <section class="project">
             <p>WDD231 Class Project</p>
             <p>Kieth Marconi Acosta</p>
         </section>
     </footer>
-
-    <script>
-        // JavaScript to set weather icon dynamically
-        window.addEventListener('load', function() {
-            const weatherIcon = document.getElementById('weather-icon');
-            const weatherData = {
-                icon: 'sunny-icon.png', // Example of a valid icon name (replace with real data)
-            };
-
-            // If icon data is available, set the src attribute
-            if (weatherData.icon) {
-                weatherIcon.src = `images/${weatherData.icon}`;
-            } else {
-                // Set default fallback image if no icon data is found
-                weatherIcon.src = 'images/default-icon.png';
-            }
-        });
-    </script>
 </body>
 </html>
