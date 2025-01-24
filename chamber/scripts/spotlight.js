@@ -10,11 +10,11 @@ async function createSpotlight() {
         selectedMembers.forEach(member => {
             const card = `
                 <div class="spotlight-card">
-                    <img src="images/${member.image}" alt="${member.name}" width="100" height="100">
                     <h3>${member.name}</h3>
+                    <img src="images/${member.image}" alt="${member.name}" width="100" height="100">
                     <p>${member.phone}</p>
                     <p>${member.address}</p>
-                    <a href="${member.website}" target="_blank">Visit Website</a>
+                    <a href="${member.website}" target="_blank">Link</a>
                     <p>Membership Level: ${member.level}</p>
                 </div>
             `;
