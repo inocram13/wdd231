@@ -82,7 +82,7 @@ form.dsgnOne, .lvl {
 
 /*************** MEMBERSHIP LEVELS ***************/
 .lvl {
-    background-color: #CFE8FC; /* Light Blue */
+
     padding: 2rem;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
@@ -95,7 +95,7 @@ form.dsgnOne, .lvl {
 }
 
 .lvl aside {
-    background-color: #5EAAA8; /* Softer Teal */
+    background-color: #054d4a; /* Softer Teal */
     color: white;
     border-radius: 12px;
     padding: 15px;
@@ -126,14 +126,54 @@ form.dsgnOne, .lvl {
 }
 
 /*************** RESPONSIVENESS ***************/
+/* 📱 Mobile (max-width: 768px) */
 @media (max-width: 768px) {
-    .svnlvn {
+    header, #navbar, .buttons, footer {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+    }
+    
+    #navbar {
+        display: none; /* Hide menu by default */
+        position: absolute;
+        width: 100%;
+        background: var(--light-color);
+        border-top: 1px solid #ccc;
     }
 
-    form.dsgnOne, .lvl {
+    #navbar ul {
+        flex-direction: column;
+    }
+
+    .dsgnOne input, .dsgnOne select {
         width: 100%;
-        max-width: 500px;
+    }
+
+    #members {
+        grid-template-columns: 1fr; /* Single column */
     }
 }
+
+/* 💻 Tablet (769px - 1199px) */
+@media (min-width: 769px) and (max-width: 1199px) {
+    #navbar {
+        justify-content: space-around;
+    }
+
+    #members {
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+    }
+}
+
+/* 🖥️ Wide Screens (1200px and up) */
+@media (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #members {
+        grid-template-columns: repeat(4, 1fr); /* Four columns */
+    }
+}
+

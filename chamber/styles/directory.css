@@ -1,13 +1,14 @@
 /* Root Variables for Reusability */
 :root {
-    --primary-color: #005f73;
-    --secondary-color: #94d2bd;
-    --hover-color: #007bff;
-    --active-color: #28a745;
-    --text-color: #333;
-    --background-color: #f9f9f9;
-    --light-color: #f8f8f8;
+    --primary-color: #005A8D; /* Deep Ocean Blue */
+    --secondary-color: #6AB187; /* Calm Forest Green */
+    --hover-color: #003F63; /* Dark Navy Blue */
+    --active-color: #008F6B; /* Vibrant Teal */
+    --text-color: #1A1A1A; /* Dark Graphite */
+    --background-color: #F8F8F8; /* Soft Off-White */
 }
+
+
 
 /* General Styles */
 body {
@@ -50,6 +51,12 @@ header button {
     cursor: pointer;
     font-size: 1.5em;
 }
+
+    img {
+        width: auto;  /* Adjust width to fit the container */
+        height: auto; /* Maintain natural aspect ratio */
+        max-width: 70px;  /* Optional: Constrain maximum width */
+    }
 
 /* Hamburger Menu Styles */
 #hamburger {
@@ -313,7 +320,7 @@ section.ew h2{
     padding: 5px 10px;
 }
 main h2{
-    color: #28a745;
+    color: black;
 }
  w
  
