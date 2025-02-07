@@ -52,3 +52,7 @@ memberships.forEach(membership => {
 
 // Set hidden date properly
 document.querySelector('#today').value = new Date().toISOString().split('T')[0];
+
+window.addEventListener("pagehide", () => {
+    socket.close(); // Close WebSocket before navigating away
+});
