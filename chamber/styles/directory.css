@@ -55,7 +55,6 @@ header button {
     img {
         width: auto;  /* Adjust width to fit the container */
         height: auto; /* Maintain natural aspect ratio */
-        max-width: 70px;  /* Optional: Constrain maximum width */
     }
 
 /* Hamburger Menu Styles */
