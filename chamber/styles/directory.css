@@ -426,7 +426,6 @@ form.dsgnOne{
     padding: .75rem 1rem;
     margin: 2rem 0;
     font-size: 1.2rem;
-    -webkit-appearance: none;
     appearance: none;
     animation: color_change 2s infinite alternate linear;
 }
@@ -435,9 +434,6 @@ form.dsgnOne{
     0% {border-radius: 1px 20px; background-color: #3d405b;}
     100% {border-radius: 20px 1px; background-color: rgb(85, 126, 128);}
 }
-.dsgnOne input:-webkit-autofill{
-    -webkit-text-fill-color: #3d405b;
-}
 
 #results{
     background-color: white;
@@ -445,9 +441,4 @@ form.dsgnOne{
     margin: 10px;
     border: 1px solid #e07a5f;
     border-radius: 6px;
-}
-
-input[type=submit] {
-    -webkit-appearance: none;
-    appearance: none;
 }
