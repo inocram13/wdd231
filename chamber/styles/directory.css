@@ -419,25 +419,38 @@ form.dsgnOne{
 .dsgnOne input:focus{border-left-color: black; outline:none;}
 .dsgnOne input:required:valid{border-left-color: green;}
 
-.dsgnOne input[type=submit]{
+.dsgnOne input[type=submit] {
     border: 1px solid black;
     text-align: center;
     color: white;
     padding: .75rem 1rem;
     margin: 2rem 0;
     font-size: 1.2rem;
-    -webkit-appearance: none;
-    appearance: none;
-    animation: color_change 2s infinite alternate linear;
+    cursor: pointer;
+    background: linear-gradient(45deg, #3d405b, rgb(85, 126, 128));
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
 }
 
-@keyframes color_change{
-    0% {border-radius: 1px 20px; background-color: #3d405b;}
-    100% {border-radius: 20px 1px; background-color: rgb(85, 126, 128);}
+.dsgnOne input[type=submit]:hover {
+    background: linear-gradient(45deg, rgb(85, 126, 128), #3d405b);
 }
-.dsgnOne input:-webkit-autofill{
+
+@keyframes color_change {
+    0% { border-radius: 5px 15px; background-color: #3d405b; }
+    100% { border-radius: 15px 5px; background-color: rgb(85, 126, 128); }
+}
+
+.dsgnOne input:-webkit-autofill {
     -webkit-text-fill-color: #3d405b;
+    background-color: #f5f5f5 !important;
 }
+
+.dsgnOne input:-moz-autofill {
+    color: #3d405b;
+    background-color: #f5f5f5 !important;
+}
+
 
 #results{
     background-color: white;
