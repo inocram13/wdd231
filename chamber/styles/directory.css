@@ -171,7 +171,7 @@ header button {
 /* Main Styles */
 main {
     padding: 20px;
-    text-align: center;
+    text-align: start;
 }
 main h1{
     margin: .5rem 10px;
@@ -313,11 +313,136 @@ section.ew h2{
     padding: 5px 10px;
 }
 main h2{
-    margin: 5rem 10px;
     color: #28a745;
 }
  w
  
 div.weather div{
     display: flex;
+}
+
+/********************************Modal pop up**************************/
+.lvl aside{
+    border: solid 1px var(--text-color);
+    border-radius: 5px 20px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+@keyframes slidein {
+    0%{
+        opacity: 0%;
+        margin-top: 50PX;
+        background-color: var(--active-color);
+    }
+    100%{
+        opacity: 100%;
+        margin: 50px;
+        background-color: var(--secondary-color);
+    }
+}
+
+#mlModal{
+    position: relative;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 15px var(--text-color);
+    width: 90%;
+}
+
+#mlModal div{
+    display: grid;
+    grid-template-columns: auto 44px;
+    border-bottom: dashed 1px var(--background-color);
+}
+
+    #mlModal h4{
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0;
+    }
+    #mlModal span{
+        font-size: 1rem;
+    }
+
+    ::backdrop{
+        background-color: rgba(255, 255 , 255, .75);
+    }
+
+    #mlModal button{
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 8px;
+        background-color: var(--background-color);
+        font-size: 1.5rem;
+    }
+/********************** join form ********************/
+.svnlvn {
+    padding: 1rem;
+}
+form.dsgnOne{
+    margin: 1rem 2%;
+}
+.dsgnOne label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.dsgnOne h3{
+    font-size: .9rem;
+    color: var(--secondary-color);
+    margin: 1.5rem 0 .2rem 0;
+    border-bottom: 1px solid var(--background-color);
+}
+.dsgnOne input[type=text],
+.dsgnOne input[type=tel],
+.dsgnOne input[type=date],
+.dsgnOne input[type=email],
+.dsgnOne textarea,
+.dsgnOne select {
+    display: flex;
+    margin: .1rem 0 1rem 0;
+    padding: .3rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    border-left-width: 5px;
+    border-left-color: #555;
+    font-size: 1rem;
+    color: #3d405b;
+    width: 250px; 
+}
+.dsgnOne input:required{border-left-color: #d70000;}
+.dsgnOne input:focus{border-left-color: black; outline:none;}
+.dsgnOne input:required:valid{border-left-color: green;}
+
+.dsgnOne input[type=submit]{
+    border: 1px solid black;
+    text-align: center;
+    color: white;
+    padding: .75rem 1rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    -webkit-appearance: none;
+    appearance: none;
+    animation: color_change 2s infinite alternate linear;
+}
+
+@keyframes color_change{
+    0% {border-radius: 1px 20px; background-color: #3d405b;}
+    100% {border-radius: 20px 1px; background-color: rgb(85, 126, 128);}
+}
+.dsgnOne input:-webkit-autofill{
+    -webkit-text-fill-color: #3d405b;
+}
+
+#results{
+    background-color: white;
+    padding: 0 1rem;
+    margin: 10px;
+    border: 1px solid #e07a5f;
+    border-radius: 6px;
 }

@@ -1,0 +1,139 @@
+/*************** GLOBAL STYLES ***************/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F9FA;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #005f73;
+}
+
+/*************** FLEXBOX LAYOUT ***************/
+.svnlvn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+form.dsgnOne, .lvl {
+    flex: 1;
+    min-width: 350px; /* Ensures sections don't shrink too much */
+    max-width: 500px; /* Prevents excessive stretching */
+}
+
+/*************** FORM STYLING ***************/
+.dsgnOne {
+    display: flex;
+    flex-direction: column;
+    background-color: #E3F2FD; /* Light Blue */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dsgnOne label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(#000);
+    display: flex;
+    flex-direction: column;
+}
+
+.dsgnOne input[type=text],
+.dsgnOne input[type=tel],
+.dsgnOne input[type=email],
+.dsgnOne textarea,
+.dsgnOne select {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #999;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.dsgnOne textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.dsgnOne input[type=submit] {
+    margin-top: 1rem;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #3D405B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dsgnOne input[type=submit]:hover {
+    background-color: #5A6268;
+}
+
+/*************** MEMBERSHIP LEVELS ***************/
+.lvl {
+    background-color: #CFE8FC; /* Light Blue */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px;
+}
+
+.lvl h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.lvl aside {
+    background-color: #5EAAA8; /* Softer Teal */
+    color: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.lvl aside h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.lvl aside button {
+    margin-top: 10px;
+    padding: 7px 15px;
+    border: 1px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s;
+}
+
+.lvl aside button:hover {
+    background-color: white;
+    color: #457B9D;
+}
+
+/*************** RESPONSIVENESS ***************/
+@media (max-width: 768px) {
+    .svnlvn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form.dsgnOne, .lvl {
+        width: 100%;
+        max-width: 500px;
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 232 - Website Frontend Development 1 - Kieth Marconi Acosta</title>
+    <meta name="description" content="Author: Kieth Marconi Acosta, WDD 231 - Website Frontend Development 1">
+    <meta name="author" content="Kieth Marconi Acosta">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Amaya Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://inocram13.github.io/wdd231/chamber/images/images(3).jpg">
+    <meta property="og:url" content="https://inocram13.github.io/wdd231/chamber">    
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/levels.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script defer src="scripts/navbars.js"></script>
+    <script defer src="scripts/levels.js"></script>
+    
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Amaya Chamber of Commerce" width="70" height="59">
+        <div>
+            <span>Amaya</span>
+            <div>Chamber of Commerce</div>
+            <button id="hamburger" aria-label="Toggle navigation">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
+    </header>
+    <nav id="navbar" class="hidden" aria-label="Primary navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>    
+    </nav>
+<main>
+<h1>Join</h1>
+    <div class="svnlvn">
+        <section>
+            <form action="thankyou.html" method="get" class="dsgnOne">
+                <label>
+                    First Name: <input type="text" name="first_name" title="Enter your first name" required autocomplete="given-name">
+                </label>
+                <label>
+                    Last Name: <input type="text" name="last_name" title="Enter your last name" required autocomplete="family-name">
+                </label>
+                <label>
+                    Organizational Title:<input type="text" name="org_title" title="Enter your title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}">
+                </label>
+                <label>
+                    Email: <input type="email" name="email" title="Enter valid email" required autocomplete="email" placeholder="example@domain.com">
+                </label>
+                <label>
+                    Mobile Phone: <input type="tel" name="mobile" title="Enter your mobile number" placeholder="0921-292-2431" required autocomplete="tel">
+                </label>
+                <label>
+                    Business/Organizational: <input type="text" name="organization" title="Enter business name" required autocomplete="organization">
+                </label>
+
+                <label>
+                    Business Description: <textarea name="description" title=" Enter business description"></textarea>
+                </label>
+
+                <label>
+                    Membership Level:
+                    <select name="membership" required>
+                        <option value="np">Non Profit Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+            
+                <input type="hidden" name="hiddendate" id="today">
+                <input type="submit" value="Apply for Membership">
+            </form>
+        </section>
+        
+        <section class="lvl">
+            <h2>Membership Level</h2>
+                <aside>
+                    <h3> Non Profit Membership Level</h3>
+                    <button id="btn1">Learn More</button>
+                </aside>
+                <aside>
+                    <h3>Bronze Membership Level</h3>
+                    <button id="btn2">Learn More</button>
+                </aside>
+                <aside>
+                    <h3>Silver Membership Level</h3>
+                    <button id="btn3">Learn More</button>
+                </aside>
+                <aside>
+                    <h3>Gold Membership Level</h3>
+                    <button id="btn4">Learn More</button>
+                </aside>
+                    <dialog id="mlModal">
+                        <div>
+                        <h4 id="mltitle"></h4>
+                        <button id="closeModal">X</button>
+                        </div>
+                        <span id="mldetails"></span>
+                    </dialog>
+        </section>
+    </div>
+</main>
+    <footer>
+        <section class="address">
+            <p>Amaya Chamber of Commerce</p>
+            <p>234 Amaya</p>
+            <p>Tanza, Cavite 4108</p>
+            <p>info.amayacoc.org</p>
+            <p>09074633748</p>
+        </section>
+        <section class="social">
+            <a href="#" aria-label="Facebook"></a>
+            <img src="images/Facebook.svg" alt="Facebook" width="55" height="44">
+            <a href="#"></a>
+            <img src="images/X_icon.svg" alt="X" width="25" height="44">
+            <a href="#"></a>
+            <img src="images/linkedin.svg" alt="Linkedin" width="24" height="44">
+        </section>
+        <section class="project">
+            <p>WDD231 Class Project</p>
+            <p>Kieth Marconi Acosta</p>
+        </section>
+    </footer>
+</body>
+</html>
