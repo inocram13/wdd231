@@ -177,7 +177,7 @@ header button {
 /* Main Styles */
 main {
     padding: 20px;
-    text-align: start;
+    text-align: center;
 }
 main h1{
     margin: .5rem 10px;
@@ -449,4 +449,88 @@ form.dsgnOne{
     margin: 10px;
     border: 1px solid #e07a5f;
     border-radius: 6px;
+}
+/********************** discover page **********************/
+#allplaces {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 16px;
+    padding: 1rem;
+}
+
+/* Individual place card */
+#allplaces div {
+    margin: 1rem 8px;
+    padding: 16px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "name"
+        "photograph"
+        "description"
+        "cost"
+        "location"
+        "button";
+}
+
+/* Title */
+#allplaces div h2 {
+    margin: 0.5rem 0;
+    grid-area: name;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Image */
+#allplaces div img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Maintains image ratio, preventing CLS */
+    object-fit: cover; /* Ensures images look good */
+    border-radius: 8px;
+    grid-area: photograph;
+}
+/* Description */
+#allplaces div p {
+    margin: 0.5rem 0;
+    grid-area: description;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Cost */
+#allplaces div .cost {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d9534f; /* Red for visibility */
+    margin-top: 0.5rem;
+}
+/* Location */
+#allplaces div address {
+    margin: 0.5rem 0;
+    grid-area: location;
+    font-style: normal;
+    color: #007BFF; /* Blue for links */
+}
+
+/* Button */
+#allplaces div button:active {
+    transform: scale(0.98); /* Slight click effect */
+    background-color: #003f5c; /* Slightly darker blue */
+}
+
+/* Button Hover Effect */
+#allplaces div button:hover {
+    background-color: #004570;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #allplaces {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
 }
