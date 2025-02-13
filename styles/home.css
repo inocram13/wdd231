@@ -1,0 +1,267 @@
+/* Import Font */
+* {
+    font-family: "Cormorant Upright", serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/************************** HEADER **************************/
+header {
+    background-color: #bed9d2;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+header img {
+    display: block;
+    padding: 10px;
+    max-width: 70px;
+}
+header .brand {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+header .brand span:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+}
+header .brand span:nth-child(2) {
+    font-size: 1rem;
+}
+
+/************************** NAVIGATION **************************/
+nav {
+    background-color: #f27d80;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+nav ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.75rem;
+    display: block;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+nav ul li.active a {
+    background-color: #d4295f;
+    color: #fff;
+}
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/************************** HAMBURGER NAVIGATION **************************/
+button#hamburger {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #2a384a;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+button#hamburger::before {
+    content: "\2630";
+}
+button#hamburger.show::before {
+    content: "×";
+    font-size: 2.5rem;
+}
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+nav.show {
+    grid-template-rows: 1fr;
+}
+nav ul {
+    overflow: hidden;
+}
+
+/************ Hero Image *************/
+.hero {
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.hero a {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: block;
+    width: 120px;
+    text-align: center;
+    color: white;
+    border: solid 1px #000;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #2a384a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.hero a:hover {
+    background-color: #d4295f;
+}
+
+/************ Page Styling *************/
+main h1 {
+    margin: 0.5rem 10px;
+    color: #d4295f;
+    font-size: 2rem;
+}
+main h2 {
+    margin: 0.5rem 10px;
+    color: #008b94;
+    font-size: 1.5rem;
+}
+main p {
+    margin: 0.5rem 10px;
+    color: #333;
+}
+main a {
+    color: #82082f;
+    text-decoration: none;
+}
+main a:hover {
+    text-decoration: underline;
+}
+
+/************ Events and Weather *************/
+section.ew {
+    margin: 0.5rem 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+section.ew div {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+section.ew h2 {
+    margin: 0;
+    background-color: #d4295f;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+div.events p {
+    margin: 0.75rem 10px;
+}
+div.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.weather p {
+    font-family: Verdana, sans-serif;
+    font-size: 0.9rem;
+    color: #008b94;
+}
+#forecast p {
+    font-family: Verdana, sans-serif;
+    color: #008b94;
+    font-size: 0.9rem;
+}
+
+/************************** SPOTLIGHT SECTION **************************/
+#spot {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+#spot div {
+    background-color: #eee;
+    text-align: center;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+}
+#spot h2 {
+    background-color: #f27d80;
+    margin: 0;
+    padding: 8px 0;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+#spot p {
+    padding: 8px;
+}
+#spot img {
+    width: 100px;
+    height: auto;
+}
+
+/************************** RESPONSIVE DESIGN **************************/
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li {
+        border: none;
+    }
+    nav ul li a {
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    nav ul li:last-child a {
+        border: none;
+    }
+    button#hamburger {
+        display: none;
+    }
+    .hero a {
+        font-size: 1rem;
+        width: 140px;
+        padding: 10px;
+    }
+    section.ew {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 10px;
+    }
+    #spot {
+        justify-content: space-between;
+    }
+}
+/************************** FOOTER **************************/
+footer {
+    background-color: #bed9d2;
+}
+footer section {
+    padding: 2rem 10px;
+}
+footer section.social {
+    display: flex;
+    justify-content: center
+}
+
+footer img {
+    width: auto;
+    height: 44px;
+    margin: 0 10px;
+}
+footer p {
+    margin: .25rem;
+}
