@@ -1,0 +1,50 @@
+[
+    {
+        "name": " Kobe 5 Protro 'Year of Mamba'",
+        "description": "In 2025, Nike Basketball will celebrate the Year of the Snake. However, the Kobe line will receive its stand-alone pair. Known as the “Year of the Mamba” Nike Kobe 5 Protro, the shoes have Red and Gold detailing, which connects to good fortune and joy. Dressed in a University Red, Black, and Metallic Gold color scheme, this “Year of the Mamba” Nike Kobe 5 not only connects to the Chinese zodiac sign but also represents Kobe Bryant’s “Black Mamba” moniker. The shoes are highlighted with a large Gold snake that wraps the sides, with additional Gold details on the toe, heel, and tongue branding. As for the base, it comes covered in Red with snake scale textures on the collars. Completing the look is Black on the Swoosh logos and the rubber outsole.",
+        "website": "http://sneakerfiles.com",
+        "image": "kobe5.webp",
+        "price": "$190"
+    },
+    {
+        "name": "Joker 1 'Joker'",
+        "description": "Nikola Jokic's first signature shoe. Qu!kCQTECH(CQT) midsole for lighter weight, more springiness, and more comfort, accumulating more energy for jumping higher and providing great support for landing safer. Dual TPU combination for bipedal stability protection.",
+        "website": "http://361sport.com",
+        "image": "joker1.webp",
+        "price": "$129"
+    },
+    {
+        "name": "Curry 12'",
+        "description": "A cosmic explosion. That's what happened when Stephen landed in Oakland. And, it happened again when we paired light, grippy UA Flow with not one, but 2 speed plates—one for stability and one to make you fly. BANG! BANG!",
+        "website": "http://underarmour.com",
+        "image": "curry12.webp",
+        "price": "$127.67"
+    },
+    {   "name": "KD 15'",
+        "description": "Kevin Durant thrives on big games. When the stakes are high, he'll play every minute if it means getting a crucial victory. The KD15 is ready to go the distance. Lighter than his previous signature shoe, it helps you stay bouncy and comfortable at crunch time. The ride is as smooth as KD's pull-up jumper and the cushioning is as plush as his right-to-left crossover in traffic, so that you can feel contained when your team needs you the most. This EP version uses an extra-durable sole that's ideal for outdoor courts.",
+        "website": "http://nike.com",
+        "image": "kd15.webp",
+        "price": "$177.73"
+    },
+    {
+        "name": "Jordan x Travis Scoot Air Jordan 1 High'",
+        "description": "The Travis Scott x Air Jordan 1 High OG TS SP features a new look on the iconic silhouette, thanks to an oversized backward-facing Swoosh on the lateral side. A traditionally oriented Swoosh graces the medial side of the upper, which is built with a blend of white leather and brown suede. Additional unique details include a double-layer construction on the collar and Scott's crudely drawn face logo embossed on the heel.",
+        "website": "http://farfetch.com",
+        "image": "jordan1.webp",
+        "price": "$1,896"
+    },
+    {
+        "name": "Luka 3'",
+        "description": "Shift your game into high gear with the lightest Luka yet. Designed to help you create space through acceleration, the Luka 3 features full-length Cushlon 3.0 foam for a smooth heel-to-toe transition. A strong but flexible plate underfoot brings lateral containment, helping you drive out of your step-back to attack the basket. We built speed into the design as well, helping you look 100 as you blow past.",
+        "website": "http://nike.com",
+        "image": "luka3.webp",
+        "price": "$127.62"
+    },
+    {
+        "name": "Wade All City 13 'Year of the Snake'",
+        "description": "Full-length BOOM midsole for bounce and cushioning, and VAJRA SKIN upper for durability. TPU Euro Plate for torsional resistance and support to best perform Eurostep. Forefoot rubber outsole and rearfoot GCU outsole for strong traction. Heel design inspired by lunar caves, and upper patterned in snake skin.",
+        "website": "http://wayofwade.com",
+        "image": "wow13.webp",
+        "price": "$151.92"
+    }
+]

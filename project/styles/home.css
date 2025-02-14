@@ -8,7 +8,7 @@
 
 /************************** HEADER **************************/
 header {
-    background-color: #bed9d2;
+    background-color: #c7cfcd;
     display: flex;
     align-items: center;
     padding: 10px 15px;
@@ -33,7 +33,7 @@ header .brand span:nth-child(2) {
 
 /************************** NAVIGATION **************************/
 nav {
-    background-color: #f27d80;
+    background-color: #535152;
 }
 nav ul {
     list-style: none;
@@ -51,8 +51,8 @@ nav ul li a {
     transition: background 0.3s ease;
 }
 nav ul li.active a {
-    background-color: #d4295f;
-    color: #fff;
+    background-color: #E9DCBE;
+    color: #000000;
 }
 nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.15);
@@ -108,23 +108,23 @@ nav ul {
     display: block;
     width: 120px;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     border: solid 1px #000;
     border-radius: 5px;
     padding: 8px;
-    background-color: #2a384a;
+    background-color: #c9dbf3;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease;
 }
 .hero a:hover {
-    background-color: #d4295f;
+    background-color: #E9DCBE;
 }
 
 /************ Page Styling *************/
 main h1 {
     margin: 0.5rem 10px;
-    color: #d4295f;
+    color: #000000;
     font-size: 2rem;
 }
 main h2 {
@@ -158,8 +158,8 @@ section.ew div {
 }
 section.ew h2 {
     margin: 0;
-    background-color: #d4295f;
-    color: white;
+    background-color: #E9DCBE;
+    color: rgb(0, 0, 0);
     padding: 8px 12px;
     border-radius: 3px;
 }
@@ -247,7 +247,7 @@ div.weather p {
 }
 /************************** FOOTER **************************/
 footer {
-    background-color: #bed9d2;
+    background-color: #aaa;
 }
 footer section {
     padding: 2rem 10px;
