@@ -392,7 +392,7 @@ form.designOne {
     padding-top: .2rem;
 }
 .designOne h3 {
-    font-size: .9rem;
+    font-size: 1.5rem;
     color: #9e2e0f;
     margin: 1.5rem 0 .2rem 0;
     border-bottom: 1px solid #eee;
@@ -434,7 +434,7 @@ form.designOne {
 
   @keyframes color_change {
 	0% {border-radius: 1px 20px; background-color: #333;}
-    100% {border-radius: 20px 1px; background-color: rgb(155, 166, 167);}
+    100% {border-radius: 20px 1px; background-color: rgb(101, 107, 107);}
 }
 .designOne input:-webkit-autofill{
 -webkit-text-fill-color: #3e4dcf;
