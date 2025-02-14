@@ -1,11 +1,11 @@
 // select HTML elements in the document
 const weatherIcon = document.querySelector('#weather-icon');
-const report = document.querySelector('#report');
+const report = document.querySelector('#weather-report');
 const forecast = document.querySelector('#forecast');
 
-const lat="24.94"
-const lon="-111.74"
-const key="437209d363a4387bb2f5dffcea58bbee"
+const lat="14.3372"
+const lon="120.8533"
+const key="2ed35afebf26a75b72e060b3991275f8"
 
 //const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=imperial`;
 const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=imperial`;
@@ -99,8 +99,24 @@ async function apiFetch() {
     forecast.appendChild(temp2)
 
     const temp3=document.createElement('p')
-    temp3.innerHTML = `${dayNames[d.getDay()+2]}: ${data.list[16].main.temp}&deg;F`
+    temp3.innerHTML = `${dayNames[(d.getDay()+2) % 7]}: ${data.list[16].main.temp}&deg;F`
     forecast.appendChild(temp3)
+
+    const temp5=document.createElement('p')
+    temp5.innerHTML = `${dayNames[(d.getDay()+3) % 7]}: ${data.list[24].main.temp}&deg;F`
+    forecast.appendChild(temp5)
+
+    const temp6=document.createElement('p')
+    temp6.innerHTML = `${dayNames[(d.getDay()+4) % 7]}: ${data.list[32].main.temp}&deg;F`
+    forecast.appendChild(temp6)
+
+    const temp7=document.createElement('p')
+    temp7.innerHTML = `${dayNames[(d.getDay()+5) % 7]}: ${data.list[40].main.temp}&deg;F`
+    forecast.appendChild(temp7)
+
+    const temp8=document.createElement('p')
+    temp8.innerHTML = `${dayNames[(d.getDay()+6) % 7]}: ${data.list[48].main.temp}&deg;F`
+    forecast.appendChild(temp8)
   }
 
   

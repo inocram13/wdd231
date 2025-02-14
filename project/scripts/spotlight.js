@@ -1,4 +1,4 @@
-const spotlight = document.querySelector('#spot');
+const spotlight = document.querySelector('#spotlight');
 const path = './data/solesociety.json';
 
 async function getMembers() {

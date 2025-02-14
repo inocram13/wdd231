@@ -1,6 +1,6 @@
 /* Import Font */
 * {
-    font-family: "Cormorant Upright", serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -129,7 +129,7 @@ main h1 {
 }
 main h2 {
     margin: 0.5rem 10px;
-    color: #008b94;
+    color: #000000;
     font-size: 1.5rem;
 }
 main p {
@@ -174,23 +174,23 @@ div.weather {
 div.weather p {
     font-family: Verdana, sans-serif;
     font-size: 0.9rem;
-    color: #008b94;
+    color: #000000;
 }
 #forecast p {
     font-family: Verdana, sans-serif;
-    color: #008b94;
+    color: #000000;
     font-size: 0.9rem;
 }
 
 /************************** SPOTLIGHT SECTION **************************/
-#spot {
+#spotlight {
     margin: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 }
-#spot div {
+#spotlight div {
     background-color: #eee;
     text-align: center;
     border: 1px solid #aaa;
@@ -198,17 +198,17 @@ div.weather p {
     padding: 10px;
     width: 250px;
 }
-#spot h2 {
-    background-color: #f27d80;
+#spotlight h2 {
+    background-color: #E9DCBE;
     margin: 0;
     padding: 8px 0;
     font-size: 1.1rem;
     border-radius: 5px;
 }
-#spot p {
+#spotlight p {
     padding: 8px;
 }
-#spot img {
+#spotlight img {
     width: 100px;
     height: auto;
 }
