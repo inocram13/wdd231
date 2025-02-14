@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sole Society</title>
+    
+    <meta name="description" content="Sole Society - Your ultimate sneaker community. Find exclusive sneaker drops, news, and events.">
+    <meta name="author" content="Kieth Marconi Acosta">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Sole Society">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://inocram13.github.io/wdd231/chamber/images/images(3).jpg">
+    <meta property="og:url" content="https://inocram13.github.io/wdd231/chamber"> 
+
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/wide.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/spotlight.js"></script>
+    <script defer src="scripts/cls.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/soles-society.png" alt="Sole Society Logo" width="70" height="59">
+        <div class="brand">
+            <span>Sole Society</span>
+        </div>
+        <button id="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-icon"></span>
+        </button>
+    </header>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li class="active"><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>Directory</h1>
+        <div class="theButtons">
+            <button id="btnGrid" class="active">Grid</button>
+            <button id="btnList" class="">List</button>
+        </div>
+        <div id="spotlight" class="grid">
+             <!-- JShere -->
+        </div>
+
+    </main>
+
+    <footer>
+        <section class="address">
+            <p><strong>Sole Society</strong></p>
+            <p>311 Sole Society, Tanza, Cavite 4108</p>
+            <p>Email: info@solesociety.com</p>
+            <p>Phone: +63 907 463 3748</p>
+        </section>
+
+        <section class="social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                <img src="images/facebook.png" alt="Facebook" width="55" height="44">
+            </a>
+            <a href="https://twitter.com" target="_blank" aria-label="X">
+                <img src="images/X_logo.jpg" alt="X" width="25" height="44">
+            </a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="images/linkedin.png" alt="LinkedIn" width="24" height="44">
+            </a>
+        </section>
+
+        <section class="project">
+            <p>WDD231 Class Project</p>
+            <p>Kieth Marconi Acosta</p>
+            <p>&copy; <span id="currentyear">😎Kieth Marconi Acosta😎 | Philippines </span></p>
+            <p>Last Modified: <span id="lastmodified"></span></p>
+        </section>
+    </footer>
+</body>
+</html>

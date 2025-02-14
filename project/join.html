@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sole Society</title>
+    
+    <meta name="description" content="Sole Society - Your ultimate sneaker community. Find exclusive sneaker drops, news, and events.">
+    <meta name="author" content="Kieth Marconi Acosta">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="Sole Society">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://inocram13.github.io/wdd231/chamber/images/images(3).jpg">
+    <meta property="og:url" content="https://inocram13.github.io/wdd231/chamber"> 
+
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/wide.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/levels.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/soles-society.png" alt="Sole Society Logo" width="70" height="59">
+        <div class="brand">
+            <span>Sole Society</span>
+        </div>
+        <button id="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-icon"></span>
+        </button>
+    </header>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="active"><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+
+    <main>
+<div class="sbs">
+<section class="join-form">
+    <h1>Join Sole Society</h1>
+    <p>Become part of the ultimate sneaker community!</p>
+    <form action="submit_form.php" method="POST" class="designOne">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+        
+        <label for="sneaker-preference">Favorite Sneaker Brand:</label>
+        <select id="sneaker-preference" name="sneaker-preference">
+            <option value="nike">Nike</option>
+            <option value="adidas">Adidas</option>
+            <option value="puma">Puma</option>
+            <option value="new-balance">New Balance</option>
+            <option value="asics">Asics</option>
+            <option value="jordan">Air Jordan</option>
+        </select>
+        
+        <label>
+            <input type="checkbox" name="newsletter" value="yes">
+            Subscribe to our newsletter
+        </label>
+        
+        <button type="submit">Join Now</button>
+
+
+        <h3>Membership Level</h3>
+        <label><input type="radio" name="level" value="Non Profit Membership"> Non Profit Membership</label>
+        <label><input type="radio" name="level" value="Bronze Membership" checked> Bronze Membership</label>
+        <label><input type="radio" name="level" value="Silver Membership"> Silver Membership</label>
+        <label><input type="radio" name="level" value="Sealing"> Gold Membership</label>
+    
+    
+        <input type="submit" value="Apply for Membership">
+        <input type="hidden" name="hiddendate" id="today">
+    </form>
+    </section>
+
+    <section class="mslvl">
+        <h2>Membership Levels</h2>
+        <!-- Non Provit level -->
+        <aside>
+            <h3>Non Profit Membership Level</h3>
+            <button id="ml1Btn">Learn More</button>
+        </aside>
+        <aside>
+            <h3>Bronze Membership Level</h3>
+            <button id="ml2Btn">Learn More</button>
+        </aside>
+        <aside>
+            <h3>Silver Membership Level</h3>
+            <button id="ml3Btn">Learn More</button>
+        </aside>
+        <aside>
+            <h3>Gold Membership Level</h3>
+            <button id="ml4Btn">Learn More</button>
+        </aside>
+            <dialog id="mlModal">
+                <div>
+                <h4 id="mltitle"></h4>
+                <button id="closeModal">X</button>
+                </div>
+                <span id="mldetails"></span>
+            </dialog>
+        </section>
+</div>
+</section>
+<footer>
+    <section class="address">
+        <p><strong>Sole Society</strong></p>
+        <p>311 Sole Society, Tanza, Cavite 4108</p>
+        <p>Email: info@solesociety.com</p>
+        <p>Phone: +63 907 463 3748</p>
+    </section>
+
+    <section class="social">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <img src="images/facebook.png" alt="Facebook" width="55" height="44">
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="X">
+            <img src="images/X_logo.jpg" alt="X" width="25" height="44">
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <img src="images/linkedin.png" alt="LinkedIn" width="24" height="44">
+        </a>
+    </section>
+
+    <section class="project">
+        <p>WDD231 Class Project</p>
+        <p>Kieth Marconi Acosta</p>
+        <p>&copy; <span id="currentyear">😎Kieth Marconi Acosta😎 | Philippines </span></p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+    </section>
+</footer>
+</body>
+</html>
+</main>
