@@ -275,28 +275,33 @@ div.theButtons button {
   border-radius: 10px;
   border: 1px solid #666;
 }
-div#members {
+div#sneakers {
   margin: 0 2vw;
 }
 /*GRID layout here*/
 div.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap:8px;
-  justify-content: center;
-  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    min-height: 200px;
+    padding: 10px;
 }
+
 div.grid section {
-  text-align: center;
-  margin: 1rem 0;
-  border: solid 1px #aaa;
-  background-color: #eee;
-  border-radius: 10px;
-  overflow: hidden;
+    flex: 1 1 300px; /* Allows flexible sizing */
+    max-width: 300px; /* Prevents full-width stretching */
+    text-align: center;
+    margin: 1rem 0;
+    border: solid 2px #aaa;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
 }
-div.grid img:first-child {width: 100%; height: auto;}
+div.grid img:first-child {width: 70%; height: auto ;}
 div.grid h3 {margin: .2rem 0;}
 div.grid p {margin: .2rem 0;}
+
 
 /*LIST layout here*/
 div.list section {
@@ -339,16 +344,18 @@ div.list img:first-child {display: none;}
     }
   }
 
-
-
-#mlModal {
-    position: relative;
-    border: 2px solid #E9DCBE;
+  #mlModal {
+    border: 2px solid #000;
     border-radius: 8px;
     padding: .5rem;
-    background-color: #eee;
-    box-shadow: 0 0 15px #777;
+    background-color: #e2dddd;
+    box-shadow: 0 0 15px #000000;
     width: 90%;
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #mlModal div {
@@ -375,7 +382,7 @@ div.list img:first-child {display: none;}
     height: 44px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: #ccc;
+    background-color: #1a1111;
     font-size: 1.5rem;
   }
  
@@ -391,7 +398,7 @@ form.designOne {
     color: #000000;
     padding-top: .2rem;
 }
-.designOne h3 {
+.designOne h2 {
     font-size: 1.5rem;
     color: #9e2e0f;
     margin: 1.5rem 0 .2rem 0;
@@ -466,3 +473,4 @@ button {
 button:hover {
     background-color: #615a59;
 }
+

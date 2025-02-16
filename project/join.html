@@ -38,89 +38,89 @@
         </button>
     </header>
 
-    <nav id="navbar">
+    <nav id="navigation">
         <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li class="active"><a href="join.html">Join</a></li>
-            <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
 
-    <main>
-<div class="sbs">
-<section class="join-form">
-    <h1>Join Sole Society</h1>
-    <p>Become part of the ultimate sneaker community!</p>
-    <form action="submit_form.php" method="POST" class="designOne">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone">
-        
-        <label for="sneaker-preference">Favorite Sneaker Brand:</label>
-        <select id="sneaker-preference" name="sneaker-preference">
-            <option value="nike">Nike</option>
-            <option value="adidas">Adidas</option>
-            <option value="puma">Puma</option>
-            <option value="new-balance">New Balance</option>
-            <option value="asics">Asics</option>
-            <option value="jordan">Air Jordan</option>
-        </select>
-        
-        <label>
-            <input type="checkbox" name="newsletter" value="yes">
-            Subscribe to our newsletter
-        </label>
-        
-        <button type="submit">Join Now</button>
+<main>
+    <div class="sbs">
+        <section class="join-form">
+            <h1>Join Sole Society</h1>
+            <p>Become part of the ultimate sneaker community!</p>
+            <form action="submit_form.php" method="POST" class="designOne">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+                
+                <label for="sneaker-preference">Favorite Sneaker Brand:</label>
+                <select id="sneaker-preference" name="sneaker-preference">
+                    <option value="nike">Nike</option>
+                    <option value="adidas">Adidas</option>
+                    <option value="puma">Puma</option>
+                    <option value="new-balance">New Balance</option>
+                    <option value="asics">Asics</option>
+                    <option value="jordan">Air Jordan</option>
+                </select>
+                
+                <label>
+                    <input type="checkbox" name="newsletter" value="yes">
+                    Subscribe to our newsletter
+                </label>
+                
+                <button type="submit">Join Now</button>
 
 
-        <h3>Membership Level</h3>
-        <label><input type="radio" name="level" value="Non Profit Membership"> Non Profit Membership</label>
-        <label><input type="radio" name="level" value="Bronze Membership" checked> Bronze Membership</label>
-        <label><input type="radio" name="level" value="Silver Membership"> Silver Membership</label>
-        <label><input type="radio" name="level" value="Sealing"> Gold Membership</label>
-    
-    
-        <input type="submit" value="Apply for Membership">
-        <input type="hidden" name="hiddendate" id="today">
-    </form>
-    </section>
+                <h2>Membership Level</h2>
 
-    <section class="mslvl">
-        <h2>Membership Levels</h2>
-        <!-- Non Provit level -->
-        <aside>
-            <h3>Non Profit Membership Level</h3>
-            <button id="ml1Btn">Learn More</button>
-        </aside>
-        <aside>
-            <h3>Bronze Membership Level</h3>
-            <button id="ml2Btn">Learn More</button>
-        </aside>
-        <aside>
-            <h3>Silver Membership Level</h3>
-            <button id="ml3Btn">Learn More</button>
-        </aside>
-        <aside>
-            <h3>Gold Membership Level</h3>
-            <button id="ml4Btn">Learn More</button>
-        </aside>
-            <dialog id="mlModal">
-                <div>
-                <h4 id="mltitle"></h4>
-                <button id="closeModal">X</button>
-                </div>
-                <span id="mldetails"></span>
-            </dialog>
+                <label><input type="radio" name="level" value="Non Profit Membership"> Non Profit Membership</label>
+                <label><input type="radio" name="level" value="Bronze Membership" checked> Bronze Membership</label>
+                <label><input type="radio" name="level" value="Silver Membership"> Silver Membership</label>
+                <label><input type="radio" name="level" value="Sealing"> Gold Membership</label>
+            
+            
+                <input type="submit" value="Apply for Membership">
+                <input type="hidden" name="hiddendate" id="today">
+            </form>
         </section>
-</div>
-</section>
+
+        <section class="mslvl">
+            <h2>Membership Levels</h2>
+            <!-- Non Provit level -->
+            <aside>
+                <h3>Non Profit Membership Level</h3>
+                <button id="ml1Btn">Learn More</button>
+            </aside>
+            <aside>
+                <h3>Bronze Membership Level</h3>
+                <button id="ml2Btn">Learn More</button>
+            </aside>
+            <aside>
+                <h3>Silver Membership Level</h3>
+                <button id="ml3Btn">Learn More</button>
+            </aside>
+            <aside>
+                <h3>Gold Membership Level</h3>
+                <button id="ml4Btn">Learn More</button>
+            </aside>
+                <dialog id="mlModal">
+                    <div>
+                    <h4 id="mltitle"></h4>
+                    <button id="closeModal">X</button>
+                    </div>
+                    <span id="mldetails"></span>
+                </dialog>
+        </section>
+    </div>
+</main>
 <footer>
     <section class="address">
         <p><strong>Sole Society</strong></p>
@@ -150,4 +150,4 @@
 </footer>
 </body>
 </html>
-</main>
+

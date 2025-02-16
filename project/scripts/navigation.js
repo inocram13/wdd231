@@ -1,7 +1,7 @@
 const hamburger = document.querySelector('#hamburger');
-const navbar = document.querySelector('#navbar');
+const navigation = document.querySelector('#navigation');
 
 hamburger.addEventListener('click', () => {
-    navbar.classList.toggle('hidden');
-    hamburger.classList.toggle('open'); // Toggles the "X" icon
+    navigation.classList.toggle('show');
+    hamburger.classList.toggle('show'); // Toggles the "X" icon
 });

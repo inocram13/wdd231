@@ -1,7 +1,7 @@
 const spotlight = document.querySelector('#spotlight');
 const path = './data/solesociety.json';
 
-async function getMembers() {
+async function getSneakers() {
     try {
         const response = await fetch(path);
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
@@ -64,4 +64,4 @@ function showOnPage(item) {
     spotlight.appendChild(container);
 }
 
-getMembers();
+getSneakers();
