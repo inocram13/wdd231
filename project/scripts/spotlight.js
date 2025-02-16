@@ -39,18 +39,11 @@ function showOnPage(item) {
     image.loading = "lazy";
     container.appendChild(image);
 
-    // Description (if available)
+    // Description
     if (item.description) {
         const description = document.createElement('p');
         description.textContent = item.description;
         container.appendChild(description);
-    }
-
-    // Phone (if available)
-    if (item.phone) {
-        const phone = document.createElement('p');
-        phone.textContent = `Contact: ${item.phone}`;
-        container.appendChild(phone);
     }
 
     // Website Link
